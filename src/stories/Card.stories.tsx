@@ -6,7 +6,7 @@ export default {
   title: 'Elements/Card',
   component: Card,
   decorators: [
-    (Card) => (
+    (Card: any) => (
       <div style={{ display: 'flex', maxWidth: '800px' }}>
         <Card />
       </div>
