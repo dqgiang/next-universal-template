@@ -7,10 +7,6 @@
   align-items: center;
 }
 
-.container h3 {
-  @apply text-green-600;
-}
-
 .main {
   padding: 5rem 0;
   flex: 1;

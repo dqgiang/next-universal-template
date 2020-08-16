@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './card.module.css';
 
-type CardProps = {
+export type CardProps = {
   url: string;
   title: string;
   text: string;
