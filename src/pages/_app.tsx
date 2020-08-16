@@ -5,7 +5,7 @@ import TagManager from 'react-gtm-module';
 import { DefaultSeo } from 'next-seo';
 
 import '../styles/style.css';
-import { getGlobalData } from '@@/utils/api';
+import { getGlobalData } from '@utils/api';
 
 const gtmArgs = {
   gtmId: process.env.GTM_ID || '',
