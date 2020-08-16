@@ -1,30 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The Universal Next.js Template
 
-## Getting Started
+A NextJS template preconfigured with Typescript, ESLint, Prettier, TailwindCSS, DotEnv, Next SEO and Google Tag Manager support.
 
-First, run the development server:
+## What's included
 
-```bash
-npm run dev
-# or
-yarn dev
+- Nextjs v9.5+ with CSS module built-in
+- Typescript
+- ESLint with Semistandard coding style and Typescript support
+- Prettier
+- Tailwindcss with PurgeCSS enabled and other PostCSS plugins
+- Next SEO
+- React GTM module for Google Tag Manager
+- DotEnv support
+
+## Other setup
+
+- Custom `_app` page to dynamically fetch global metadata both at build time (for pages with `getStaticProps`)
+and at runtime (for pages without `getStaticProps`)
+- Also initialize Google Tag Manager in `_app`
+- Custom `_document` page to specify `lang` attribute for SEO purpose
+- Placeholder apis in `api` folder to fetch global metadata. This should be replaced by actual call to external CMS (if any) where the metadata is stored for maximum flexibility
+- Placeholder `utils` to demonstrate how to organize fetch functions in a clean and lightweight manner
+- Example `Card` component to demonstrate how to organize view, css and file naming properly. Using `index.ts` to export component so that we don't need to specify long import statement. Also useful when grouping similar components
+
+```ts
+// DON'T
+import Card from '../components/Card/card.component.tsx';
+
+// DO
+import { Card } from '../components/Card';
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Preconfigure `paths` for module alias. Must be done in both `tsconfig.json` and `next.config.js`
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```ts
+// DON'T
+import { Card } from '../components/Card';
 
-## Learn More
+// DO
+import { Card } from '@components/Card';
+```
 
-To learn more about Next.js, take a look at the following resources:
+- Included npm script to run linter
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint
+# OR
+npm run lint:fix
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Local development
 
-## Deploy on Vercel
+1. Copy `.env.example` to `.env` and edit variables accordingly
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+cp .env.example .env
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. Install node modules and start development server
+
+```bash
+npm install
+npm run dev
+```
+
+3. To start server in production mode, run:
+
+```bash
+npm run build
+npm run start
+```
+
+## Deployment
+
+This template does not include custom server.
+Vercel.com is the best way to deploy it with almost no configuration.

@@ -1,0 +1,15 @@
+/* Use `purgecss` comment to whitelist css */
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+
+/* Write your own custom base styles here */
+@import './globals.css';
+
+@import 'tailwindcss/components';
+/* Write you own custom component styles here */
+/* ... */
+
+/* purgecss end ignore */
+
+@import 'tailwindcss/utilities';
+/* Your own custom utilities */
