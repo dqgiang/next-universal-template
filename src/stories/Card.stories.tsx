@@ -1,18 +1,18 @@
 import React from 'react';
-import { Story } from '@storybook/react/types-6-0';
+import { Story, Meta } from '@storybook/react/types-6-0';
 import { Card, CardProps } from '@components/card';
 
 export default {
   title: 'Elements/Card',
   component: Card,
   decorators: [
-    (Card: any) => (
+    (Card) => (
       <div style={{ display: 'flex', maxWidth: '800px' }}>
         <Card />
       </div>
     ),
   ],
-};
+} as Meta;
 
 const Template: Story<CardProps> = (args) => <Card {...args} />;
 
