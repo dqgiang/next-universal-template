@@ -13,13 +13,13 @@
 .card:hover,
 .card:focus,
 .card:active {
-  @apply text-green-600 border-green-600;
+  @apply text-red-600 border-red-600;
 }
 
 .card h3 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
-  @apply text-green-600;
+  @apply text-red-600;
 }
 
 .card p {

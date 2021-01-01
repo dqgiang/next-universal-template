@@ -15,7 +15,9 @@ const Home = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <br />
-          <span className="text-green-600">The Universal Next.js Template!</span>
+          <span className="text-green-600">
+            The Universal <a href="https://nextjs.org/blog/next-10">Next.js 10</a> Template!
+          </span>
         </h1>
 
         <p className={styles.description}>

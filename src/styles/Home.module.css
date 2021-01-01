@@ -37,7 +37,7 @@
 }
 
 .title a {
-  @apply text-green-600;
+  @apply text-red-600;
   text-decoration: none;
 }
 
