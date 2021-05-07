@@ -12,6 +12,7 @@ module.exports = (phase) => {
     CMS_URL: process.env.CMS_URL || '',
     PREVIEW_SECRET: process.env.PREVIEW_SECRET || '',
     GTM_ID: process.env.GTM_ID || '',
+    NEXT_TELEMETRY_DEBUG: process.env.NEXT_TELEMETRY_DEBUG || 1, // Disable next telemetry https://nextjs.org/telemetry
   };
 
   // next.config.js object
